@@ -58,9 +58,7 @@ def del_key(message):
 def list_keys(message):
     keys = load_keys()
     if keys:
-        bot.send_message(message.chat.id,
-                         "📋 Danh sách key:
-" + "\n".join(keys))
+        bot.send_message(message.chat.id,"📋 Danh sách key:\n" + "\n".join(keys))
     else:
         bot.send_message(message.chat.id, "📭 Không có key nào.")
 
